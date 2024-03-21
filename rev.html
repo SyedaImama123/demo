@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" id="name">
+    <button onclick="rev()">rev</button>
+    
+    <script>
+    function rev() {
+        var digit = document.getElementById("name").value;
+        var reversed = 0;
+        var remainder;
+    
+        while (digit > 0) {
+            remainder = digit % 10;
+            reversed = reversed * 10 + remainder;
+            digit = Math.floor(digit / 10);
+        }
+    
+        document.write("Reversed number: " + reversed);
+    }
+    </script>
+    
+</body>
+</html>
